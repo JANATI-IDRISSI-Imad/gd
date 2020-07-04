@@ -1,0 +1,67 @@
+git --version
+git config --global user.name "sidguiOussama"
+git config --global user.email "sidgui.oussama@gmail.com"
+
+#cd vers le repertoire du projet
+git init
+git add .
+git commit -m "login"
+git remote add origin https://github.com/imad-ji/BuckupRestore.git
+git remote -v
+git push -f origin imad-w
+
+git log# Time line des commits
+git branch imad-w#creer une branche
+git branch #lister les branches
+git checkout imad-w# acceder a une branche
+
+git checkout master
+git merge brancheName
+git branch -d brancheName # supprimer la branche
+
+
+git pull origin imad-w
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git init
+git add .
+git commit -m "commit"
+git remote add origin https://github.com/TounsiTaha/GourmentDatte.git
+git push -u origin master
+
+
+or push an existing repository from the command line
+git remote add origin https://github.com/imad-ji/YourBuckup.git
+git push -u origin imad-w
+
+
+
+
+
+
+
+
+
+implementation 'com.google.android.gms:play-services-auth:18.0.0'
+
+android.useAndroidX=true
+android.enableJetifier=true

@@ -1,0 +1,7 @@
+#spring.data.mongodb.uri=mongodb+srv://GourmentDatte:CAFJmjxbSTS5eybF@db.1lvy2.mongodb.net/GourmentDatte?retryWrites=true&w=majority
+spring.datasource.url=jdbc:mysql://localhost:3306/gourmentdatte
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+

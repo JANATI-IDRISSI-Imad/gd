@@ -1,0 +1,11 @@
+package com.web.models;
+
+import javax.persistence.Column;
+
+public class Offermaping {
+	private int id;
+	private String nom;
+	private byte[] img;
+	private String  prix;
+	private String description;
+}

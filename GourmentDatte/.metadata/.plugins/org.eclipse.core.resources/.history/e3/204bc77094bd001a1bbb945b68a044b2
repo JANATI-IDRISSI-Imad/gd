@@ -1,0 +1,12 @@
+package com.web.models;
+
+
+
+public class OfferMaping {
+	private int id;
+	private String nom;
+	private byte[] img;
+	private String  prix;
+	private String description;
+	
+}

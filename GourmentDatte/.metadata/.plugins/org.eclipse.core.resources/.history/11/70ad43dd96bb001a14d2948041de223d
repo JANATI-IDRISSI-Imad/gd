@@ -1,0 +1,2 @@
+spring.data.mongodb.uri=
+mongodb+srv://GourmentDatte:<password>@cluster0.1lvy2.mongodb.net/<dbname>?retryWrites=true&w=majority
