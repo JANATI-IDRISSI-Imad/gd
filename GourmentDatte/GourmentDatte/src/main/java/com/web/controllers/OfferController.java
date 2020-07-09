@@ -43,9 +43,12 @@ public class OfferController {
 		return offerService.getAll();
 	}
 
-	@PutMapping("/offer/{id,c}")
-	public Offer edit(@PathVariable int id,@PathVariable Offer o){		
-		return offerService.edit(id,o);
+	@PutMapping("/offer/{id}")
+	public Offer edit(@PathVariable int id,@RequestParam("imageFile")MultipartFile file,
+			@RequestParam("nom")String nom,
+			@RequestParam("prix")String prix,
+			@RequestParam("description")String description){		
+		return offerService.edit(id,file,nom,prix,description);
 	}
 	
 	@DeleteMapping("/offer/{id}")

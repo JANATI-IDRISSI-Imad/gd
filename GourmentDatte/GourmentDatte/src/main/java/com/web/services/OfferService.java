@@ -10,12 +10,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.web.models.Offer;
-import com.web.repository.OffersRepository;
+import com.web.repository.OfferRepository;
 
 @Service
 public class OfferService {
 	@Autowired
-	private OffersRepository offerRepository;
+	private OfferRepository offerRepository;
 	
 	public Offer add(MultipartFile  file,String nom,String prix,String description){
 		Offer offer=new Offer(nom,prix,description);
@@ -38,8 +38,15 @@ public class OfferService {
 		offerRepository.deleteById(id);
 	}
 	
-	public Offer edit(int id,Offer offer) {
-		offerRepository.deleteById(id);
-		return offerRepository.save(offer);
+	public Offer edit(int id,MultipartFile  file,String nom,String prix,String description) {
+		Offer offer=new Offer(nom,prix,description);
+		try {			
+			offer.setImg(file.getBytes());
+			offerRepository.deleteById(id);
+			return offerRepository.save(offer);
+		} catch (Exception e) {
+			System.out.println(file.toString());
+			return offer;
+		}
 	}
 }
